@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import isTokenExpired from "./utils/tokenUtils";
 import ProtectedRoute from "./context/ProtectedRoute";
 import LandingPage from "./pages/LandingPage/LandingPage";
-import HowItWorks from "./pages/HowItWorks/HowItWorks";
+import HowItWorks from "./pages/HowitWorks/HowItWorks";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import EditQuestion from "./pages/EditQuestion/EditQuestion";
 import AskQuestion from "./pages/Askquestion/AskQuestion";
@@ -40,7 +40,7 @@ function App() {
           Authorization: `Bearer ${token}`,
         },
       });
-      // console.log(data.msg);
+      // console.log(data.msg); for the comming error handling
       setUser({ username: data.username, userid: data.userid });
     } catch (error) {
       setUser(null);
